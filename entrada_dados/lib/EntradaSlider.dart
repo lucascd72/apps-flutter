@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class EntradaSlider extends StatefulWidget {
@@ -21,14 +22,12 @@ class _EntradaSliderState extends State<EntradaSlider> {
         child: Column(
           children: <Widget>[
 
-            Slider(
+            CupertinoSlider(
                 value: _escolhaUsuario,
                 min: 0,
                 max: 10,
-                label: label,
                 divisions: 5,
                 activeColor: Colors.green,
-                inactiveColor: Colors.black87,
                 onChanged: (double novoValor) {
                   setState(() {
                     _escolhaUsuario = novoValor;
@@ -38,7 +37,7 @@ class _EntradaSliderState extends State<EntradaSlider> {
                 }
             ),
 
-            RaisedButton(
+            CupertinoButton(
               child: Text("Salvar",
               style: TextStyle(
                 fontSize: 20
